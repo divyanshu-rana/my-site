@@ -52,9 +52,10 @@ hr{
 }
 
 .follow {
-    position: relative;
+    /* position: relative; */
     font-size: 1.25rem;
-    top: 23rem;
+    /* top: 23rem; */
+    margin-bottom: 1rem;
 }
 
 .bottom-hr {
@@ -68,18 +69,25 @@ hr{
 }
 
 .top-container {
-    background-color: #EAF6F6;
     text-align: center;
-    width: 100%; 
-    min-height: 100vh;
+    width: 100%;
     position: relative;
     font-family: papyrus;
-    background-image: url("../img/sunset.jpg"); 
-    background-repeat: no-repeat, repeat;
-    background-color: #cccccc;
-    background-size: cover ;
     
 
+}
+
+.top-main-container{
+    height: 90vh;
+    background-image: url(../img/sunset.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    padding: 5vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .middle-container{
@@ -196,8 +204,15 @@ hr{
     color: #11999E;
     display: flex;
     justify-content: center;
-    margin-top: 23rem;
+    flex-direction: column;
+    font-family: papyrus;
     
+}
+
+.link-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer-link{
@@ -227,3 +242,19 @@ hr{
     line-height: 3rem;
 }
 
+@media only screen and (max-width:600px){
+   h1{
+       font-size: 3rem;
+   }
+   .link-container{
+       flex-direction: column;
+   }
+   .footer-link{
+       margin-right: unset !important;
+       margin-bottom: 5%;
+   }
+   .profile{
+       width: 80%;
+   }
+   .skills{width: 80%;}
+}
